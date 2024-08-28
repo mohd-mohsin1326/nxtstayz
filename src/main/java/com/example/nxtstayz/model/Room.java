@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "roomid")
     private int roomId;
 
     @Column(name = "roomname")
@@ -20,7 +20,7 @@ public class Room {
     private Double price;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "hotelid")
     private Hotel hotel;
 
     public Room() {
